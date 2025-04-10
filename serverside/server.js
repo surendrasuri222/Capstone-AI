@@ -6,13 +6,13 @@ const connectDB = require("./db/database");
 
 dotenv.config();
 const app = express();
-app.use(cors(
-  {
-    origin:[""],
-    methods:["POST","GET"],
-    credentials:true
-  }
-));
+app.use(
+  cors({
+    origin: ["https://capstone-ai-fe.vercel.app"],
+    methods: ["POST", "GET", "OPTIONS"],
+    credentials: true,
+  })
+);
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
@@ -30,3 +30,4 @@ app.use("/api", router);
 app.listen(PORT, () => {
   console.log("Server is running at port: 4000");
 });
+module.exports = app;
