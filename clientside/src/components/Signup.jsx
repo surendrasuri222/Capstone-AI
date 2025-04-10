@@ -37,7 +37,7 @@ function Signup() {
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:4000/api/signup", {
+      const response = await fetch("https://capstone-ai.vercel.app/api/signup", {
         method: "post",
         headers: {
           "content-type": "application/json",
