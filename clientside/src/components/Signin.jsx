@@ -31,7 +31,7 @@ function Signin() {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:4000/api/", {
+      const response = await fetch("https://capstone-ai.vercel.app/api/", {
         method: "post",
         headers: {
           "content-type": "application/json",
